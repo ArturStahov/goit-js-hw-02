@@ -1,14 +1,12 @@
 "use strict";
 const formatString = function(string) {
   const strLength = string.length;
+  const strReduction = "...";
 
   if (strLength <= 40) {
     return string;
   } else {
-    const arrString = string.split("");
-    arrString.slice(0, 41);
-    arrString.push("...");
-    const formatStr = arrString.join("");
+    const formatStr = string.substr(0, 40) + strReduction;
     return formatStr;
   }
 };

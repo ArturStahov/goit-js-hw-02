@@ -2,14 +2,13 @@
 const checkForSpam = function(string) {
   const formatStr = string.toLowerCase();
   const arraySpamSword = ["spam", "sale"];
-  let message = "нету спама!";
+
   for (const item of arraySpamSword) {
     if (formatStr.includes(item)) {
-      message = "найден спам!";
-      return message;
+      return true;
     }
   }
-  return message;
+  return false;
 };
 
 /*
